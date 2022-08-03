@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Purchases</title>
+</head>
+<body>
+<h1>Product list</h1>
+<table border="1">
+    <tr>
+        <th>Purchased Item</th>
+        <th>Count</th>
+        <th>Amount</th>
+        <th>Purchased Date</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+
+    <tr th:each="purchase, state : ${purchases}"
+        class="row" th:classappend="${state.odd} ? 'odd-row' : 'even-row'">
+        <td th:text="${purchase.purchaseItem}">TV</td>
+
+        <td th:text="${purchase.count}">2</td>
+        <td th:text="${purchase.amount}">15.5</td>
+        <td th:text="${purchase.purchaseDate}">2019-09-12</td>
+        <td>
+            <form>
+                <p><input type="button" value="Update"></p>
+            </form>
+        </td>
+        <td>
+            <form>
+                <p><input type="button" value="Delete"></p>
+            </form>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

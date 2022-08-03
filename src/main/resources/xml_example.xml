@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<purchase>
+    <purchaseItem>TV</purchaseItem>
+    <count>1</count>
+    <amount>12.3</amount>
+    <purchaseDate> </purchaseDate>
+    <user>
+        <name>Denis</name>
+        <age>20</age>
+    </user>
+</purchase> 
